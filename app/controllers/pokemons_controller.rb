@@ -28,7 +28,6 @@ class PokemonsController < ApplicationController
 		@pokemon.health = 100
 		@pokemon.level = 1
 		@pokemon.trainer_id = current_trainer.id
-		#@pokemon.trainer = current_trainer
 		if @pokemon.save
 			redirect_to "/trainers/" + @pokemon.trainer_id.to_s
 		else
@@ -37,9 +36,5 @@ class PokemonsController < ApplicationController
 		end
 
 	end
-
-	#private
-	#def pokemon_params
-#		params.require(:pokemon).permit(:name)
-	#end
+	
 end
